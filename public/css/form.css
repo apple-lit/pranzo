@@ -14,7 +14,40 @@ input::placeholder{
 }
 
 .formSubmit{
-  border-bottom: 1px solid #000;
+  border: 1px solid #fff;
   background-color:#fd8109;
-  padding: 5px 50px;
+  padding: 10px 80px;
+  color:#fff;
+}
+
+.camp-place-selector {
+  width:60%;
+  padding:10px 40px;
+  margin-top:20px;
+}
+
+select{
+    border-color:#fff;
+    outline:none;
+    text-indent:0;
+    background: none transparent;
+    vertical-align: middle;
+    font-size: inherit;
+    color: inherit;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    color:#fff;
+}
+select option{
+  background-color: #fff;
+  color: #fff;
+  text-align: center;
+}
+select::-ms-expand {
+  display: none;
+}
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #ffffff;
 }

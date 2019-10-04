@@ -58,3 +58,19 @@
   overflow: hidden;
   background-color: #fd8109;
 }
+
+.post-complete{
+  color:white;
+  font-size:2rem;
+}
+
+.post-complete-container{
+  line-height:100px;
+}
+
+.post-complete-container a{
+  color:#fff;
+  text-decoration: none;
+  padding:10px 80px;
+  border: solid 0.5px #fff;
+}

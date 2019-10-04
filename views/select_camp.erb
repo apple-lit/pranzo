@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/css/form.css">
+
+<div class="top-page-wrapper">
+<div class="button-container">
+<p class="post-complete">会場を選択</p>
+<select name="camp_place" class="camp-place-selector">
+  <option value="nocamp">選択してください。</option>
+  <option value="kantoArea">ーー関東エリアーー</option>
+  <option value="todaiAsano">東京大学浅野キャンパス</option>
+  <option value="sfc">慶應義塾大学SFC</option>
+  <option value="waseda">早稲田大学</option>
+  <option value="gakushuin">学習院大学</option>
+  <option value="ynu">横浜国立大学</option>
+  <option value="seikei">成蹊大学</option>
+  <option value="dhu">デジタルハリウッド大学</option>
+  <option value="tcu">東京都市大学</option>
+  <option value="kansaiArea">ーー関西エリアーー</option>
+  <option value="kansai">関西大学</option>
+  <option value="ritsumeikan">立命館大学</option>
+  <option value="chubuArea">ーー中部エリアーー</option>
+  <option value="meijo">名城大学</option>
+  <option value="shinshu">信州大学</option>
+  <option value="hokkaidoArea">ーー北海道・東北エリアーー</option>
+  <option value="hokkaido">北海道大学</option>
+  <option value="tohoku">東北大学</option>
+  <option value="kyushuArea">ーー九州エリアーー</option>
+  <option value="kyushu">九州大学</option>
+</select>
+
+<form action='/list' method="post">
+<input type="submit" value="検索" class="btn">
+</form>
+<input type="button" value="もどる"　class="btn">
+</div>
+</div>
