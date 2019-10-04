@@ -16,10 +16,12 @@ end
 
 post '/new' do
 
+
+  redirect '/new/done'
 end
 
 get '/new/done' do
-
+  erb :post_complete
 end
 
 get '/find' do
