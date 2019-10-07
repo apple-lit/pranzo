@@ -33,9 +33,13 @@ post '/new' do
   end
 
   Restaurant.create({
-  body: params[:body],
-  img: img_url
+    restaurants: params[:restaurants],
+    image: img_url,
+    genre: params[:genre],
+    name: params[:mentor],
+    adress: params[:adress]
   })
+
 
 
   redirect '/new/done'
@@ -54,8 +58,9 @@ get '/find' do
   erb :select_camp
 end
 
-post 'find/list' do
-
+post '/find/list' do
+  @list = Restaurant.all.order('id desc')
+  erb :list
 end
 
 get '/find/list/:id' do

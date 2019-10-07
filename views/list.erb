@@ -1,0 +1,13 @@
+
+	<div class="top-page-wrapper">
+		<div class="button-container">
+    <% @list.each do |list| %>
+    <p><%= list.restaurants %></p><br>
+    <img src="<%= list.image %>"><br>
+    <p><%= list.name %></p><br>
+    <p><%= list.genre %></p><br>
+    <p><%= list.camp %></p><br>
+    <%end%>
+
+		</div>
+	</div>
