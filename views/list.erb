@@ -2,11 +2,14 @@
 	<div class="top-page-wrapper">
 		<div class="button-container">
     <% @list.each do |list| %>
+    <div class="listBox">
     <p><%= list.restaurants %></p><br>
-    <img src="<%= list.image %>"><br>
+    <img src="<%= list.image %>" style="width:200px;"><br>
     <p><%= list.name %></p><br>
     <p><%= list.genre %></p><br>
     <p><%= list.camp %></p><br>
+    <%# <p><%= list.review %></p>
+    </div>
     <%end%>
 
 		</div>

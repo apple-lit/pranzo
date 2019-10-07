@@ -79,3 +79,8 @@
   background-color:#ff6b57;
   border-color:#ffa9cd
 }
+
+.listBox{
+  float:left;
+  overflow:hidden;
+}

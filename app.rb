@@ -37,7 +37,8 @@ post '/new' do
     image: img_url,
     genre: params[:genre],
     name: params[:mentor],
-    adress: params[:adress]
+    adress: params[:adress],
+    camp: params[:camp]
   })
 
 
