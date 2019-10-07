@@ -42,7 +42,6 @@ post '/new' do
   })
 
 
-
   redirect '/new/done'
 end
 

@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_02_074808) do
+ActiveRecord::Schema.define(version: 2019_10_07_124309) do
+
+  create_table "camps", force: :cascade do |t|
+    t.string "name"
+    t.float "lat"
+    t.float "lon"
+  end
 
   create_table "restaurants", force: :cascade do |t|
     t.string "restaurants"
