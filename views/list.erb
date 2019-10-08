@@ -1,15 +1,43 @@
 
-	<div class="top-page-wrapper">
-		<div class="button-container">
+	<div class="list-page-wrapper mapflexcontainer">
+		<div class="button-container mapflexcontainer">
     <% @list.each do |list| %>
     <div class="listBox">
-    <p><%= list.restaurants %></p><br>
-    <img src="<%= list.image %>" style="width:200px;"><br>
-    <p><%= list.name %></p><br>
-    <p><%= list.genre %></p><br>
-    <p><%= list.camp %></p><br>
+    <p class="restaurant-name"><%= list.restaurants %></p>
+    <div class="restaurant-image" style="background-image:url(<%= list.image %>)"></div><br>
+    <p class="mentor-name"><%= list.name %></p><br>
+    <p class="restaurant-genre"><%= list.genre %></p><br>
+    <p class="camp-place"><%= list.camp %></p><br>
     <%# <p><%= list.review %></p>
     </div>
     <%end%>
 		</div>
+
+
 	</div>
+
+  <div id="map" class="mapflex"></div><!-- 地図を表示する div 要素（id="map"）-->
+
+<script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: {lat: 35.3880800, lng: 139.4272151 }
+        });
+
+        map.addListener('click', function(e) {
+          placeMarkerAndPanTo(e.latLng, map);
+        });
+      }
+
+      function placeMarkerAndPanTo(latLng, map) {
+        var marker = new google.maps.Marker({
+          position: latLng,
+          map: map
+        });
+        map.panTo(latLng);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAG1iiA_x3dpWbnSla7RJu5fcrXJsSyjYs&callback=initMap">
+    </script>
