@@ -4,7 +4,7 @@
   padding:5px;
   margin:10px;
   border: 0.5px solid rgb(109, 62, 0);
-  border-radius:3px;
+  border-radius:1px;
   background-color: rgba(255, 215, 128, 0.315);
   color:#fff;
 }
@@ -20,11 +20,11 @@ input::placeholder{
   color:#fff;
 }
 
-.camp-place-selector {
+/* .camp-place-selector {
   width:60%;
   padding:10px 40px;
   margin-top:20px;
-}
+} */
 
 select{
     border-color:#fff;
@@ -38,6 +38,10 @@ select{
     -moz-appearance: button;
     appearance: button;
     color:#fff;
+    width:300px;
+    padding:10px;
+    margin-top:20px;
+    border-radius: 1px;
 }
 select option{
   background-color: #fff;

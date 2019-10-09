@@ -95,9 +95,11 @@
 .listBox{
   float:left;
   overflow:hidden;
-  width:50vw;
+  width:40vw;
   border-left:dotted 1px #fff;
   border-right:dotted 1px #fff;
+  padding:20px;
+  margin: 20px 20px 0 0;
 }
 
 #map {
