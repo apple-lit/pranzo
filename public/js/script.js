@@ -1,5 +1,7 @@
 
 
+// place = document.getElementsByName('adress').value;
+
 function getLatLng(place) {
 
   // ジオコーダのコンストラクタ
