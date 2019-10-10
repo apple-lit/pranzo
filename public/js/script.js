@@ -25,5 +25,35 @@ function getLatLng(place) {
 
           // 検索結果地が含まれるように範囲を拡大
           bounds.extend(latlng);
-
           console.log(latlng);
+
+          // あとはご自由に・・・。
+          new google.maps.InfoWindow({
+            content: address + "<br>(Lat, Lng) = " + latlng.toString()
+          }).open(map, new google.maps.Marker({
+            position: latlng,
+            map: map
+          }));
+        }
+      }
+
+      // 範囲を移動
+      map.fitBounds(bounds);
+
+    } else if (status == google.maps.GeocoderStatus.ERROR) {
+      alert("サーバとの通信時に何らかのエラーが発生！");
+    } else if (status == google.maps.GeocoderStatus.INVALID_REQUEST) {
+      alert("リクエストに問題アリ！geocode()に渡すGeocoderRequestを確認せよ！！");
+    } else if (status == google.maps.GeocoderStatus.OVER_QUERY_LIMIT) {
+      alert("短時間にクエリを送りすぎ！落ち着いて！！");
+    } else if (status == google.maps.GeocoderStatus.REQUEST_DENIED) {
+      alert("このページではジオコーダの利用が許可されていない！・・・なぜ！？");
+    } else if (status == google.maps.GeocoderStatus.UNKNOWN_ERROR) {
+      alert("サーバ側でなんらかのトラブルが発生した模様。再挑戦されたし。");
+    } else if (status == google.maps.GeocoderStatus.ZERO_RESULTS) {
+      alert("見つかりません");
+    } else {
+      alert("えぇ～っと・・、バージョンアップ？");
+    }
+  });
+}
