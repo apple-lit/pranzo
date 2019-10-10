@@ -1,3 +1,5 @@
+
+
 function getLatLng(place) {
 
   // ジオコーダのコンストラクタ
