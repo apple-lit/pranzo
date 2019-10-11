@@ -1,8 +1,10 @@
 
 
-// place = document.getElementsByName('adress').value;
+
 
 function getLatLng(place) {
+
+  place = document.getElementsByName('adress').value;
 
   // ジオコーダのコンストラクタ
   var geocoder = new google.maps.Geocoder();
