@@ -10,3 +10,8 @@ end
 class Restaurant < ActiveRecord::Base
 
 end
+
+class Camp < ActiveRecord::Base
+
+
+end
