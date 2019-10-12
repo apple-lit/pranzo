@@ -69,6 +69,7 @@
   height: 100vh;
   overflow: hidden;
   background-color: #fd8109;
+
 }
 
 .post-complete{
@@ -131,9 +132,21 @@
 .restaurant-name{
   color:#fff;
   font-size:20px;
-
+  text-decoration: none;
 }
 
 /* .top-page-wrapper:not([class="mapflexcontainer"]) {
 height:auto;
 } */
+
+.postBackground h1{
+  color:#fff;
+  text-align: center;
+  padding:30px;
+  font-weight:100;
+}
+
+.postingform{
+    text-align: center;
+    padding:30px;
+}

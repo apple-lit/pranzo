@@ -3,16 +3,16 @@
   <div class="list-page-wrapper mapflexcontainer">
 		<div class="button-container mapflexcontainer">
     <% @list.each do |list| %>
-    <% if @list.camp == @camp_place.name %>
+
     <div class="listBox">
-    <p class="restaurant-name"><%= list.restaurants %></p>
+    <a href="/list/<% list.id %>" class="restaurant-name"><%= list.restaurants %></a>
     <div class="restaurant-image" style="background-image:url(<%= list.image %>)"></div><br>
     <p class="mentor-name"><%= list.name %></p><br>
     <p class="restaurant-genre"><%= list.genre %></p><br>
     <p class="camp-place"><%= list.camp %></p><br>
     <%# <p><%= list.review %></p>
     </div>
-    <%end%>
+
     <%end%>
 		</div>
 
