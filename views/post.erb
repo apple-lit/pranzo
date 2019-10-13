@@ -1,7 +1,9 @@
 <link rel="stylesheet" href="/css/form.css">
 <script src="/js/script.js"></script>
-<div class="postBackground">
-    <h1>美味しいご飯を共有しよう。</h1>
+<body class="postBackground">
+<%# <div class="postBackground"> %>
+<div class="postingNotBack">
+    <h1 style="letter-spacing:5px;">Share Your Favorites.</h1>
     <form class="postingform" action="/new" method="post" enctype="multipart/form-data">
       <input class="formdesign" type="text" name="restaurants" placeholder="店名を入力"><br>
       <input type="file" name="file"><br>
@@ -51,8 +53,10 @@
           <option value="5">★★★★★</option>
       </select><br>
       <input class="formdesign" type="textarea"  rows="40" cols="3" name="review" placeholder="口コミを記入（任意）" ><br>
-      <input type="submit" class="formSubmit" value="Submit" onclick="codeAddress();">
-      <a href="/" style="text-decoration:none; color:#fff;">Topへ戻る</a>
+      <input type="submit" class="formSubmit" value="Submit" onclick="codeAddress();"><br>
+      <a href="/" class="toTop" style="text-decoration:none; color:#fff;">Topへ戻る</a>
     </form>
 
+    <%# </div> %>
     </div>
+</body>
