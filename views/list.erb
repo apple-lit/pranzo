@@ -24,18 +24,18 @@
 
 
 
-<script type="text/javascript" charset="utf-8" src="https://map.yahooapis.jp/js/V1/jsapi?appid=dj00aiZpPTkxVXVTTGgzbVBUMCZzPWNvbnN1bWVyc2VjcmV0Jng9MjU-"></script>
+<%# <script type="text/javascript" charset="utf-8" src="https://map.yahooapis.jp/js/V1/jsapi?appid=dj00aiZpPTkxVXVTTGgzbVBUMCZzPWNvbnN1bWVyc2VjcmV0Jng9MjU-"></script>
 <script type="text/javascript">
 window.onload = function(){
    var ymap = new Y.Map("map");
    ymap.drawMap(new Y.LatLng(35.66572, 139.73100), 17, Y.LayerSetId.NORMAL);
 }
 
-</script>
+</script> %>
 
 
 
-<%# <script>
+<script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 16.5,
@@ -57,6 +57,6 @@ window.onload = function(){
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAG1iiA_x3dpWbnSla7RJu5fcrXJsSyjYs&callback=initMap">
-    </script> %>
+    </script>
 
 </body>

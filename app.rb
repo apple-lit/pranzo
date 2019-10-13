@@ -37,13 +37,18 @@ post '/new' do
 
   uri = URI("https://map.yahooapis.jp/geocode/V1/geoCode")
   uri.query = URI.encode_www_form({
-    method: "",
+    query: params[:address],
+    appid: 'dj00aiZpPTkxVXVTTGgzbVBUMCZzPWNvbnN1bWVyc2VjcmV0Jng9MjU-
+',
+    output: 'json'
+
   })
 
   res = Net::HTTP.get_response(uri)
   json = JSON.parse(res.body)
   @latlon = json["Coordinates"]
 
+p JSON.parse(res.body)
 
   Restaurant.create({
     restaurants: params[:restaurants],
