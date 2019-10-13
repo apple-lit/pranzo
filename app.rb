@@ -1,9 +1,11 @@
 require 'bundler/setup'
 Bundler.require
 require 'sinatra/reloader' if development?
-
+require 'json'
 require 'sinatra/activerecord'
 require './models'
+require 'open-uri'
+require 'net/http'
 
 
 before do
@@ -31,6 +33,17 @@ post '/new' do
     upload = Cloudinary::Uploader.upload(tempfile.path)
     img_url = upload['url']
   end
+
+
+  uri = URI("https://map.yahooapis.jp/geocode/V1/geoCode")
+  uri.query = URI.encode_www_form({
+    method: "",
+  })
+
+  res = Net::HTTP.get_response(uri)
+  json = JSON.parse(res.body)
+  @latlon = json["Coordinates"]
+
 
   Restaurant.create({
     restaurants: params[:restaurants],
@@ -61,6 +74,7 @@ end
 post '/find/list' do
   @list = Restaurant.all.order('id desc')
   @camp_place = Camp.all.order('id desc')
+
   erb :list
 end
 
