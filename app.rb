@@ -59,7 +59,6 @@ p JSON.parse(res.body)
     camp: params[:camp]
   })
 
-
   redirect '/new/done'
 end
 
