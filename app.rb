@@ -38,8 +38,7 @@ post '/new' do
   uri = URI("https://map.yahooapis.jp/geocode/V1/geoCoder")
   uri.query = URI.encode_www_form({
     query: params[:address],
-    appid: 'dj00aiZpPTkxVXVTTGgzbVBUMCZzPWNvbnN1bWVyc2VjcmV0Jng9MjU-
-',
+    appid: 'dj00aiZpPTkxVXVTTGgzbVBUMCZzPWNvbnN1bWVyc2VjcmV0Jng9MjU-',
     output: 'json'
 
   })
