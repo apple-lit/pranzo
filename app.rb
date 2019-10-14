@@ -77,7 +77,7 @@ end
 post '/find/list' do
   @camp_place = Camp.all.order('id desc')
   @list = Restaurant.where(camp: params[:camp_place])
-
+  @camp_map = Camp.where(name: params[:camp_place])
   erb :list
 end
 
