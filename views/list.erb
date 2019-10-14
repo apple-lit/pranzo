@@ -3,7 +3,7 @@
   <div class="list-page-wrapper mapflexcontainer">
 		<div class="button-container mapflexcontainer">
     <% @list.each do |list| %>
-    <% if Restaurant.where(camp: params[:camp_place]) %>
+
     <div class="listBox">
     <a href="/list/<% list.id %>" class="restaurant-name"><%= list.restaurants %></a>
     <div class="restaurant-image" style="background-image:url(<%= list.image %>)"></div><br>
@@ -11,7 +11,7 @@
     <p class="restaurant-genre"><%= list.genre %></p><br>
     <p class="camp-place"><%= list.camp %></p><br>
     </div>
-    <%end%>
+
     <%end%>
 		</div>
 
