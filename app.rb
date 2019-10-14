@@ -78,6 +78,8 @@ post '/find/list' do
   @camp_place = Camp.all.order('id desc')
   @list = Restaurant.where(camp: params[:camp_place])
   @camp_map = Camp.where(name: params[:camp_place])
+  @camp_lat = Camp.find(lat: params[:lat])
+  @camp_lon = Camp.find(lon: params[:lon])
   erb :list
 end
 
