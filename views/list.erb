@@ -42,7 +42,7 @@ window.onload = function(){
 
         (document.getElementById('map'), {
           zoom: 16.5,
-          center: {lat: <%@camp_lat %>, lng: <%@camp_lon%>}
+          center: {lat: <%@camp_map.lat %>, lng: <%@camp_map.lon%>}
         });
 
         map.addListener('click', function(e) {
