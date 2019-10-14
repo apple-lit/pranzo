@@ -76,7 +76,7 @@ end
 
 post '/find/list' do
   @list = Restaurant.all.order('id desc')
-  @camp_place = Camps.all.order('id desc')
+  @camp_place = Camp.all.order('id desc')
 
   erb :list
 end
